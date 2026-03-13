@@ -127,6 +127,13 @@
 
 -Link added in final documentation/PDF
 
+## 📥 How to Use
+-Download the .pbix file from this repository.
+
+-Open it using Power BI Desktop.
+
+-Explore the interactive dashboard.
+
 ## 📊 Results / Output
 ->The final dashboard provides insights such as:
 
