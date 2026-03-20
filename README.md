@@ -2,26 +2,6 @@
 
 An end-to-end exploratory data analysis and interactive dashboard project built in Microsoft Power BI, analyzing Netflix's global content library across genres, countries, ratings, and release trends.
 
-📊 Dashboard Preview
-Page 1 — Content Overview
-<img width="1158" height="647" alt="{610DBBEF-0E36-43D7-A6BB-118CE86CB411}" src="https://github.com/user-attachments/assets/5a5d9e42-afb1-4cf9-9c12-2b071896b442" />
-
-
-Total Netflix Titles: 8,809
-Content added over time (2008–2021)
-Movies vs TV Shows distribution
-Global content distribution map
-
-Page 2 — Advanced Analysis
-<img width="1154" height="667" alt="{C6F97A36-4502-4380-BB12-6DF26C798506}" src="https://github.com/user-attachments/assets/57e101e6-456e-4441-ac68-f7e8a1e6fc4f" />
-
-
-Top genres on Netflix
-Movie vs TV Show added by year
-Content rating distribution
-Top 10 countries with most Netflix content
-
-
 📁 Project Structure
 netflix-powerbi-analysis/
 │
