@@ -144,5 +144,5 @@ Performed in **Power Query Editor** inside Power BI:
 
 
 
-> ⭐ If you found this project helpful, please give it a star!
+
 
