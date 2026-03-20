@@ -1,177 +1,100 @@
-# 📊 Netflix Content Analysis using Power BI
-## 📌 Project Overview
--This project presents an interactive Netflix Content Analysis Dashboard developed using Power BI.
+🎬 Netflix Content Analysis — Power BI Dashboard
 
--The dashboard helps analyze Netflix movies and TV shows data to generate meaningful insights about content trends, ratings, genres, countries, and growth over time.
- 
--The goal of this project is to demonstrate how data visualization tools can transform raw data into actionable insights.
+An end-to-end exploratory data analysis and interactive dashboard project built in Microsoft Power BI, analyzing Netflix's global content library across genres, countries, ratings, and release trends.
 
-## 🎯 Objective
--To analyze Netflix movies and TV shows dataset
+📊 Dashboard Preview
+Page 1 — Content Overview
+<img width="1158" height="647" alt="{610DBBEF-0E36-43D7-A6BB-118CE86CB411}" src="https://github.com/user-attachments/assets/5a5d9e42-afb1-4cf9-9c12-2b071896b442" />
 
--To create an interactive dashboard using Power BI
 
--To identify trends in content type, genre, ratings, and release years
+Total Netflix Titles: 8,809
+Content added over time (2008–2021)
+Movies vs TV Shows distribution
+Global content distribution map
 
--To support data-driven decision making
+Page 2 — Advanced Analysis
+<img width="1154" height="667" alt="{C6F97A36-4502-4380-BB12-6DF26C798506}" src="https://github.com/user-attachments/assets/57e101e6-456e-4441-ac68-f7e8a1e6fc4f" />
 
-## 🛠 Proposed System / Solution
--The system includes the following steps:
 
-1️⃣ Data Collection
+Top genres on Netflix
+Movie vs TV Show added by year
+Content rating distribution
+Top 10 countries with most Netflix content
 
--Dataset of Netflix movies and TV shows
 
-->Attributes include:
+📁 Project Structure
+netflix-powerbi-analysis/
+│
+├── Netflix_Analysis.pbix        # Main Power BI file
+├── netflix_titles.csv           # Source dataset
+├── README.md                    # Project documentation
+└── screenshots/
+    ├── overview.png
+    └── advanced.png
 
--Title
+🗂️ Dataset
 
--Type (Movie / TV Show)
+Source: Netflix Movies and TV Shows — Kaggle
+File: netflix_titles.csv
+Rows: 8,809 titles
+Columns: 12
 
--Genre
+ColumnDescriptionshow_idUnique ID for each titletypeMovie or TV ShowtitleName of the contentdirectorDirector(s)castCast memberscountryCountry of productiondate_addedDate added on Netflixrelease_yearYear of releaseratingContent rating (TV-MA, PG-13, etc.)durationDuration in minutes or seasonslisted_inGenre(s)descriptionShort description
 
--Release Year
+🔧 Data Preparation (Power Query)
+Performed in Power Query Editor inside Power BI:
 
--Rating
+Promoted headers and set correct column data types
+Handled 31% missing values in the cast column
+Handled missing values in director and country columns
+Extracted year from date_added for time-series analysis
+Split multi-value listed_in and country columns for granular analysis
+Removed duplicates and standardized text casing
 
--Country
 
--Duration
+⚠️ A separate Query Errors step was tracked in Power Query to monitor transformation issues.
 
--Date Added
 
+📈 Key Insights
+InsightFinding📌 Total Titles8,809 titles on Netflix🎬 Content Split69.62% Movies, 30.38% TV Shows📅 Peak YearMost content added around 2019–2020🌍 Top CountryUnited States leads by a huge margin🇮🇳 India2nd largest content contributor🎭 Top GenreDramas, International Movies (362 titles)⭐ Top RatingTV-MA is the most common rating (36.41%)📉 Older ContentVery little content pre-2010
 
-2️⃣ Data Preprocessing
+🖥️ Dashboard Pages
+Page 1: Netflix Content Overview
+VisualDescriptionKPI CardTotal Netflix titlesLine ChartContent added per year (2008–2021)Pie ChartMovies vs TV Shows splitMap VisualGlobal content distribution by country
+Page 2: Netflix Advanced Analysis
+VisualDescriptionHorizontal Bar ChartTop genres by number of titlesStacked Bar ChartMovie vs TV Show added by release yearDonut ChartContent rating distributionHorizontal Bar ChartTop 10 countries with most content
 
-->Data cleaning was performed using Power Query:
+🚀 How to Run
 
--Removing missing values
+Clone the repository
 
--Correcting data formats
+bash   git clone https://github.com/your-username/netflix-powerbi-analysis.git
+   cd netflix-powerbi-analysis
 
--Organizing columns
+Open in Power BI Desktop
 
--Transforming data
+Download and install Power BI Desktop (free)
+Open Netflix_Analysis.pbix
 
-3️⃣ Data Visualization
 
-->The dashboard includes:
+Refresh Data (if needed)
 
--📊 Bar Charts
+Go to Home > Transform Data
+Update the file path in the Source step to point to your local netflix_titles.csv
+Click Close & Apply
 
--🥧 Pie Charts
 
--📈 Line Graphs
 
--📌 KPI Cards
 
--🔍 Filters & Slicers
+🛠️ Tools & Technologies
+ToolPurposeMicrosoft Power BI DesktopDashboard creation & data modelingPower Query (M Language)Data cleaning & transformationDAXCalculated measures & KPIsBing Maps VisualGeographic distributionExcel / CSVSource data
 
--These visualizations allow users to explore data dynamically.
+📌 Features
 
-## 💻 Technologies Used
-
-->Software:
-
--Power BI Desktop
-
--Microsoft Excel / CSV Dataset
-
-->Tools & Technologies:
-
--Power BI – Dashboard creation
-
--Power Query – Data cleaning & transformation
-
--DAX (Data Analysis Expressions) – Calculated measures & metrics
-
--Excel Dataset – Source data
-
-## ⚙ System Development Approach
-->Although Power BI is not a machine learning tool, it uses analytical techniques such as:
--Data Aggregation
-
--Filtering
-
--Sorting
-
--Grouping
-
--DAX Calculations
-
-## 📂 Data Fields Used
--Show ID
-
--Title
-
--Type
-
--Country
-
--Release Year
-
--Rating
-
--Duration
-
--Genre
-
--Date Added
-
-## 🚀 Deployment
--Dashboard created in Power BI Desktop
-
--Published to Power BI Service (Cloud) for sharing
-
--Project files stored in GitHub Repository
-
--Link added in final documentation/PDF
-
-## 📥 How to Use
--Download the .pbix file from this repository.
-
--Open it using Power BI Desktop.
-
--Explore the interactive dashboard.
-
-## 📊 Results / Output
-->The final dashboard provides insights such as:
-
--Total number of Movies and TV Shows
-
--Comparison between Movies and TV Shows
-
--Top Countries producing content
-
--Most common Genres
-
--Content growth over the years
-
--Rating distribution
-
-📌 Interactive filters allow users to explore the data dynamically
-
-## 🏁 Conclusion
--The Netflix Content Analysis project demonstrates how Power BI can transform large datasets into interactive and meaningful dashboards.
-
--It improves data interpretation and supports data-driven decision-making.
-
-## 🔮 Future Scope
-->The project can be enhanced by:
-
--Adding viewer engagement metrics
-
--Comparing Netflix with other streaming platforms
-
--Integrating predictive analytics
-
--Using real-time data updates
-
--These improvements can make the dashboard more advanced and powerful.
-
-## 📚 References
--Netflix Dataset – Kaggle
-
--Microsoft Power BI Official Documentation
-
--Data Visualization & Analytics Resources
+✅ Interactive slicers and cross-filtering across visuals
+✅ Drill-through enabled between pages
+✅ Dynamic KPI cards
+✅ Time-series trend analysis
+✅ Geographic map visualization
+✅ Content rating breakdown
+✅ Genre analysis with horizontal bar charts
